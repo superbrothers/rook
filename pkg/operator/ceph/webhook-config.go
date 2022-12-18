@@ -129,6 +129,7 @@ func createCertificate(ctx context.Context, certMgrClient *cs.CertmanagerV1Clien
 				Kind: "Issuer",
 			},
 			SecretName: admissionControllerAppName,
+			Duration:   &metav1.Duration{Duration: time.Hour},
 		},
 	}
 
